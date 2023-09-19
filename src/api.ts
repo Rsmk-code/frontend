@@ -18,7 +18,7 @@ export enum Difficulty {
     HARD = "hard"
 }
 export const fetchQuizQuestions = async (amount: number, difficulty: Difficulty) => {
-    const endpoint = `http://localhost:5000/${amount}/${difficulty}`
+    const endpoint = `https://quiz-app-backend-pos1.onrender.com/${amount}/${difficulty}`
     const response = await axios.get(endpoint)
 
     return response.data.map((question: Question) => (
